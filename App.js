@@ -7,11 +7,11 @@ import VendorContext from './src/VendorContext';
 
 const AppNavigator = createStackNavigator(
   {
-    Home: { screen: HomeScreen,  },
+    Home: { screen: HomeScreen },
     VendorsList: { screen: VendorListScreen },
   },
   {
-    initialRouteName: 'Home'
+    initialRouteName: 'Home',
   },
 );
 
@@ -19,7 +19,7 @@ const AppContainer = createAppContainer(AppNavigator);
 
 export default function App({ vendors }) {
   const vendorContext = useContext(VendorContext);
-  vendorContext.vendors = vendors ? vendors : [Storija];
-  
+  vendorContext.vendors = vendors || [Storija];
+
   return <AppContainer />;
 }

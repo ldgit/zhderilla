@@ -16,8 +16,8 @@ it('should render vendors correctly', async () => {
 });
 
 function copyVendor(original, newName) {
-  return { 
-    ...original, 
+  return {
+    ...original,
     data: { ...original.data, name: newName },
   };
 }

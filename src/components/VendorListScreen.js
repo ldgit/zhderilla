@@ -8,6 +8,7 @@ export default function VendorListScreen() {
 
   return (
     <View style={styles.container}>
+      {/* eslint-disable-next-line react/no-array-index-key */}
       {vendors.map((vendor, index) => <Button key={index} title={vendor.data.name} />)}
     </View>
   );
