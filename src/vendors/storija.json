@@ -1,0 +1,54 @@
+{
+    "appVersion": "0.0.1",
+    "language": "hr",
+    "vendorData": {
+        "name": "Fast Food Štorija",
+        "phone": ["+385955544819"],
+        "address": "",
+        "menu": {
+            "items": [
+                { 
+                    "name": "Sendvič u tijestu",
+                    "price": "16,00"
+                },
+                { 
+                    "name": "Pizza, miješana",
+                    "price": "12,00"
+                },
+                { 
+                    "name": "Pizza, 4 vrste sira",
+                    "price": ""
+                },
+                { 
+                    "name": "Mali topli sendvič",
+                    "price": "10,00"
+                },
+                { 
+                    "name": "Srednji topli sendvič",
+                    "price": "12,00"
+                },
+                { 
+                    "name": "Veliki topli sendvič",
+                    "price": "14,00"
+                },
+                {
+                    "name": "Salata piletina",
+                    "price": "30,00"
+                }
+            ],
+            "condiments": [
+                { "name": "ajvar", "price": "0,00" },
+                { "name": "jaja", "price": "0,00" },
+                { "name": "kapula", "price": "0,00" },
+                { "name": "kečap", "price": "0,00" },
+                { "name": "kukuruz", "price": "0,00" },
+                { "name": "kupus", "price": "0,00" },
+                { "name": "majoneza", "price": "0,00" },
+                { "name": "pome", "price": "0,00" },
+                { "name": "senf", "price": "0,00" },
+                { "name": "tartar", "price": "0,00" },
+                { "name": "zelena salata", "price": "0,00" }
+            ]
+        }
+    }
+}
