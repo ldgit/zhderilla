@@ -1,7 +1,7 @@
 {
     "appVersion": "0.0.1",
     "language": "hr",
-    "vendorData": {
+    "data": {
         "name": "Fast Food Štorija",
         "phone": ["+385955544819"],
         "address": "",
