@@ -1,4 +1,5 @@
-// Needed for react-native-gesture-handler to work in jest (https://github.com/kmagiera/react-native-gesture-handler/issues/344)
+// Needed for react-native-gesture-handler to work in jest
+// (https://github.com/kmagiera/react-native-gesture-handler/issues/344)
 jest.mock('react-native-gesture-handler', () => {
   // eslint-disable-next-line global-require
   const View = require('react-native/Libraries/Components/View/View');
