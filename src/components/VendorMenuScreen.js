@@ -1,6 +1,7 @@
 import React from 'react';
-import { TouchableOpacity, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import styles from '../styles';
+import Button from './Button';
 
 export default function VendorMenuScreen({ navigation }) {
   const vendorMenu = navigation.getParam('menu');
@@ -11,7 +12,7 @@ export default function VendorMenuScreen({ navigation }) {
       <View key={index} style={styles.row}>
         <Text style={styles.rowItem}>{item.name}</Text>
         <Text style={styles.rowItem}>{item.price}</Text>
-        <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Add</Text></TouchableOpacity>
+        <Button>Add</Button>
       </View>
     ));
   }
@@ -22,3 +23,7 @@ export default function VendorMenuScreen({ navigation }) {
     </View>
   );
 }
+
+VendorMenuScreen.navigationOptions = ({ navigation }) => ({
+  title: `Menu - ${navigation.getParam('title')}`,
+});
