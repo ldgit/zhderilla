@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+const buttonBlue = '#2196F3';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -9,7 +11,6 @@ const styles = StyleSheet.create({
   },
   items: {
     flex: 1,
-    alignItems: 'stretch',
     backgroundColor: '#F5FCFF',
   },
   row: {
@@ -28,9 +29,10 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    backgroundColor: '#2196F3',
-    borderRadius: 2,
+    backgroundColor: buttonBlue,
+    borderRadius: 5,
     elevation: 4,
+    margin: 10,
   },
   buttonText: {
     flex: 1,
