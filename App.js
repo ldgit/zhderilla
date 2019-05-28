@@ -5,6 +5,7 @@ import HomeScreen from './src/components/HomeScreen';
 import VendorMenuScreen from './src/components/VendorMenuScreen';
 import VendorContext from './src/VendorContext';
 import { headerColor } from './src/styles';
+import transitionConfig from './src/transitionConfiguration';
 
 const AppNavigator = createStackNavigator(
   {
@@ -12,6 +13,7 @@ const AppNavigator = createStackNavigator(
     VendorMenu: { screen: VendorMenuScreen },
   },
   {
+    transitionConfig,
     initialRouteName: 'Home',
     defaultNavigationOptions: {
       headerStyle: {
