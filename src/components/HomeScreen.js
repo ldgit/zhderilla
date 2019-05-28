@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import VendorContext from '../VendorContext';
-import Button from './Button';
 import styles from '../styles';
 
 export default function HomeScreen({ navigation }) {
@@ -13,6 +12,7 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.items}>
+      <Text style={styles.subtitle}>Choose a vendor to create order</Text>
       {/* eslint-disable-next-line react/no-array-index-key */}
       {vendors.map((vendor, index) => <Vendor key={index} vendorData={vendor.data} onPress={openVendorMenu} />)}
     </View>
@@ -27,10 +27,13 @@ function Vendor({ vendorData, onPress }) {
   const testId = `createOrder ${vendorData.name}`;
 
   return (
-    <View style={styles.row}>
-      <Text style={styles.rowItem}>{vendorData.name}</Text>
-      <Button onPress={onButtonPress} testID={testId}>Create order</Button>
-    </View>
+    <TouchableOpacity testID={testId} style={{ ...styles.vendorRow }} onPress={onButtonPress}>
+      <Text style={styles.rowItem}>
+        <Text>{vendorData.name}</Text>{'\n'}
+        <Text style={{ color: 'grey', fontWeight: 'normal', fontSize: 15 }}>{vendorData.phone}</Text>
+      </Text>
+      <Text style={styles.rowArrow}>{'>'}</Text>
+    </TouchableOpacity>
   );
 }
 

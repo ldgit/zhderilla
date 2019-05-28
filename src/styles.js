@@ -24,6 +24,13 @@ const styles = StyleSheet.create({
     backgroundColor,
     justifyContent: 'center',
   },
+  vendorRow: {
+    flexDirection: 'row',
+    backgroundColor,
+    height: 80,
+    borderBottomColor: buttonColor,
+    borderBottomWidth: 1,
+  },
   rowItem: {
     flex: 1,
     textAlignVertical: 'center',
@@ -49,10 +56,32 @@ const styles = StyleSheet.create({
     padding: 8,
     fontSize: 18,
   },
+  subtitle: {
+    color: 'black',
+    fontWeight: '500',
+    textAlignVertical: 'center',
+    padding: 8,
+    fontSize: 18,
+  },
+  rowArrow: {
+    flex: 1,
+    alignContent: 'flex-end',
+    color: buttonColor,
+    fontWeight: '800',
+    textAlign: 'right',
+    textAlignVertical: 'center',
+    padding: 8,
+    fontSize: 26,
+  },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+  },
+  vendorDescription: {
+    color: 'grey',
+    fontWeight: 'normal',
+    fontSize: 15,
   },
 });
 

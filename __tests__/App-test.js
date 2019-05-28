@@ -6,7 +6,7 @@ import Storija from '../src/vendors/storija.json';
 describe('The app', () => {
   it('should render vendors correctly', async () => {
     const anotherVendor = copyVendor(Storija, 'Fast Food Rizzo');
-    const { getByText, getAllByText } = render(<App vendors={[Storija, anotherVendor]} />);
+    const { getByText } = render(<App vendors={[Storija, anotherVendor]} />);
 
     // Check for home screen title
     await waitForElement(() => getByText('Zhderilla'));
@@ -14,7 +14,6 @@ describe('The app', () => {
     // Check for vendor list
     await waitForElement(() => getByText('Fast Food Štorija'));
     await waitForElement(() => getByText('Fast Food Rizzo'));
-    expect(getAllByText('Create order').length).toBe(2);
   });
 
   it('selecting a vendor should display it\'s menu', async () => {
