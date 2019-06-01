@@ -6,7 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "lint": "eslint ./",
-    "prettier": "prettier \"{src,__{tests,mocks}__}/**/*.js\" --write"
+    "prettier": "prettier \"{src,__{tests,mocks}__}/**/*.js\" --write",
+    "test:all": "npm run prettier && npm run lint && npm t"
   },
   "dependencies": {
     "react": "16.8.3",
