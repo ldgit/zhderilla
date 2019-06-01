@@ -12,16 +12,17 @@ export default function VendorMenuScreen({ navigation }) {
     }
 
     return menu.items.map((item, index) => (
-      // eslint-disable-next-line react/no-array-index-key
-      <MenuItemRow item={item} key={index} style={styles.row} onAddButtonPress={addItemToOrder} />
+      <MenuItemRow
+        item={item}
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        style={styles.row}
+        onAddButtonPress={addItemToOrder}
+      />
     ));
   }
 
-  return (
-    <View style={styles.items}>
-      {renderVendorMenu(vendorMenu)}
-    </View>
-  );
+  return <View style={styles.items}>{renderVendorMenu(vendorMenu)}</View>;
 }
 
 function MenuItemRow({ item, onAddButtonPress }) {
@@ -31,7 +32,9 @@ function MenuItemRow({ item, onAddButtonPress }) {
     <View style={styles.row}>
       <Text style={styles.rowItem}>{item.name}</Text>
       <Text style={styles.rowItem}>{item.price}</Text>
-      <Button onPress={addMenuItem} testID={`add ${item.name}`}>Add</Button>
+      <Button onPress={addMenuItem} testID={`add ${item.name}`}>
+        Add
+      </Button>
     </View>
   );
 }

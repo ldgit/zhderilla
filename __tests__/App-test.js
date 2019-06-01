@@ -1,4 +1,8 @@
-import { render, fireEvent, waitForElement } from 'react-native-testing-library';
+import {
+  render,
+  fireEvent,
+  waitForElement,
+} from 'react-native-testing-library';
 import React from 'react';
 import App from '../App';
 import Storija from '../src/vendors/storija.json';
@@ -16,10 +20,14 @@ describe('The app', () => {
     await waitForElement(() => getByText('Fast Food Rizzo'));
   });
 
-  it('selecting a vendor should display it\'s menu', async () => {
-    const { getByText, getByTestId, getAllByText } = render(<App vendors={[Storija]} />);
+  it("selecting a vendor should display it's menu", async () => {
+    const { getByText, getByTestId, getAllByText } = render(
+      <App vendors={[Storija]} />,
+    );
 
-    fireEvent.press(await waitForElement(() => getByTestId('createOrder Fast Food Štorija')));
+    fireEvent.press(
+      await waitForElement(() => getByTestId('createOrder Fast Food Štorija')),
+    );
 
     await waitForElement(() => getByText('Sendvič u tijestu'));
     await waitForElement(() => getByText('16,00'));
@@ -31,8 +39,12 @@ describe('The app', () => {
   it('creating an order', async () => {
     const { getByText, getByTestId } = render(<App vendors={[Storija]} />);
 
-    fireEvent.press(await waitForElement(() => getByTestId('createOrder Fast Food Štorija')));
-    fireEvent.press(await waitForElement(() => getByTestId('add Sendvič u tijestu')));
+    fireEvent.press(
+      await waitForElement(() => getByTestId('createOrder Fast Food Štorija')),
+    );
+    fireEvent.press(
+      await waitForElement(() => getByTestId('add Sendvič u tijestu')),
+    );
 
     // Wait for condiments screen
     await waitForElement(() => getByText('Choose condiments:'));

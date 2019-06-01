@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "prettier": "prettier \"{src,__{tests,mocks}__}/**/*.js\" --write"
   },
   "dependencies": {
     "react": "16.8.3",
@@ -20,12 +21,14 @@
     "babel-jest": "24.8.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
     "eslint-plugin-react-native": "^3.7.0",
     "jest": "24.8.0",
     "metro-react-native-babel-preset": "0.54.1",
+    "prettier": "1.17.1",
     "react-native-testing-library": "^1.7.0",
     "react-test-renderer": "16.8.3"
   },
@@ -37,5 +40,23 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-navigation|react-navigation-redux-helpers|@react-navigation/.*)"
     ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "parser": "babel",
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
   }
 }

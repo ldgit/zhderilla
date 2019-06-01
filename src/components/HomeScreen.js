@@ -13,8 +13,10 @@ export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.items}>
       <Text style={styles.subtitle}>Choose a vendor to create order</Text>
-      {/* eslint-disable-next-line react/no-array-index-key */}
-      {vendors.map((vendor, index) => <Vendor key={index} vendorData={vendor.data} onPress={openVendorMenu} />)}
+      {vendors.map((vendor, index) => (
+        /* eslint-disable-next-line react/no-array-index-key */
+        <Vendor key={index} vendorData={vendor.data} onPress={openVendorMenu} />
+      ))}
     </View>
   );
 }
@@ -27,10 +29,17 @@ function Vendor({ vendorData, onPress }) {
   const testId = `createOrder ${vendorData.name}`;
 
   return (
-    <TouchableOpacity testID={testId} style={{ ...styles.vendorRow }} onPress={onButtonPress}>
+    <TouchableOpacity
+      testID={testId}
+      style={{ ...styles.vendorRow }}
+      onPress={onButtonPress}
+    >
       <Text style={styles.rowItem}>
-        <Text>{vendorData.name}</Text>{'\n'}
-        <Text style={{ color: 'grey', fontWeight: 'normal', fontSize: 15 }}>{vendorData.phone}</Text>
+        <Text>{vendorData.name}</Text>
+        {'\n'}
+        <Text style={{ color: 'grey', fontWeight: 'normal', fontSize: 15 }}>
+          {vendorData.phone}
+        </Text>
       </Text>
       <Text style={styles.rowArrow}>{'>'}</Text>
     </TouchableOpacity>
