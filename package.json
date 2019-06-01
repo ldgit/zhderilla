@@ -8,7 +8,7 @@
     "lint": "eslint ./",
     "prettier": "prettier \"{*.{js,css,json,md},{src,__{tests,mocks}__}/**/*.{js,css,json,md}}\" --check",
     "test:all": "npm run prettier && npm run lint && npm t",
-    "coverage": "npm t -- --coverage"
+    "coverage": "npm t -- --coverage --coverageReporters=text-lcov | coveralls"
   },
   "dependencies": {
     "react": "16.8.3",
@@ -21,6 +21,7 @@
     "@babel/runtime": "7.4.5",
     "babel-eslint": "^10.0.1",
     "babel-jest": "24.8.0",
+    "coveralls": "^3.0.3",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
