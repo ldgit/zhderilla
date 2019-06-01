@@ -1,5 +1,8 @@
 # Zhderilla
 
+[![Travis (.org)](https://img.shields.io/travis/ldgit/zhderilla.svg?style=flat-square)](https://travis-ci.org/ldgit/zhderilla)
+[![Coveralls github](https://img.shields.io/coveralls/github/ldgit/zhderilla.svg?style=flat-square)](https://coveralls.io/github/ldgit/zhderilla)
+
 Zhderilla is an Android app for ordering food from fast food vendors.
 
 ## Goals
