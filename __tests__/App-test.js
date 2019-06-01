@@ -4,7 +4,7 @@ import App from '../App';
 import Storija from '../src/vendors/storija.json';
 
 describe('The app', () => {
-  it('should render vendors correctly', async () => {
+  it('should render multiple vendors correctly', async () => {
     const anotherVendor = copyVendor(Storija, 'Fast Food Rizzo');
     const { getByText } = render(<App vendors={[Storija, anotherVendor]} />);
 
@@ -26,6 +26,19 @@ describe('The app', () => {
     await waitForElement(() => getByText('Salata piletina'));
     // Check for title
     expect(getAllByText('Menu - Fast Food Štorija').length).toBe(1);
+  });
+
+  it('creating an order', async () => {
+    const { getByText, getByTestId } = render(<App vendors={[Storija]} />);
+
+    fireEvent.press(await waitForElement(() => getByTestId('createOrder Fast Food Štorija')));
+    fireEvent.press(await waitForElement(() => getByTestId('add Sendvič u tijestu')));
+
+    // Wait for condiments screen
+    await waitForElement(() => getByText('Choose condiments:'));
+    fireEvent.press(await waitForElement(() => getByText('majoneza')));
+    fireEvent.press(await waitForElement(() => getByText('kupus')));
+    fireEvent.press(await waitForElement(() => getByText('kukuruz')));
   });
 });
 

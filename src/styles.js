@@ -31,6 +31,22 @@ const styles = StyleSheet.create({
     borderBottomColor: buttonColor,
     borderBottomWidth: 1,
   },
+  condimentRow: {
+    flexDirection: 'row',
+    height: 50,
+    borderBottomColor: buttonColor,
+    borderBottomWidth: 1,
+  },
+  condimentDescription: {
+    flex: 3,
+    textAlignVertical: 'center',
+    textAlign: 'center',
+    fontSize: 16,
+    color: textColor,
+  },
+  condimentCheckbox: {
+    flex: 1,
+  },
   rowItem: {
     flex: 1,
     textAlignVertical: 'center',
