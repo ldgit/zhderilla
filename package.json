@@ -7,7 +7,8 @@
     "test": "jest",
     "lint": "eslint ./",
     "prettier": "prettier \"{*.{js,css,json,md},{src,__{tests,mocks}__}/**/*.{js,css,json,md}}\" --check",
-    "test:all": "npm run prettier && npm run lint && npm t"
+    "test:all": "npm run prettier && npm run lint && npm t",
+    "coverage": "npm t -- --coverage"
   },
   "dependencies": {
     "react": "16.8.3",
